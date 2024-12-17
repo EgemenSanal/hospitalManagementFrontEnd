@@ -1,0 +1,64 @@
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #c5e1d9;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  .main-content {
+    background-color: #87ceeb;
+    padding: 2rem;
+    border-radius: 12px;
+  }
+  
+  .buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .history-button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .data-button {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+  }
+  
+  .data-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 600px) {
+    .buttons-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .app-container {
+      padding: 1rem;
+    }
+  }

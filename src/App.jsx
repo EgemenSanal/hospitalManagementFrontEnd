@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './pages/home'
+import Login from './pages/auth/login'
+import Layout from './pages/layout'
+import Register from './pages/auth/register'
+import Profile from './pages/profile/profile'
+import RegisterWorkers from './pages/registerworkers'
+import AdminPanel from './pages/admin/adminpanel'
+import ManageUser from './pages/admin/manageuser'
+import DoctorPanel from './pages/doctor/doctorpanel'
+import Prescription from './pages/doctor/prescription'
+import Symptoms from './pages/doctor/symptoms'
+import Refer from './pages/doctor/refer'
+import GoogleFit from './pages/doctor/googlefit'
+import { useContext } from 'react'
+import { AppContext } from './Context/AppContext'
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export default function App() {
+  const {user} = useContext(AppContext)
+
+    return <BrowserRouter>
+
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+        <Route index element= {<Home/>} />
+        <Route path='/login' element={user ? <Home /> : <Login />}/>
+        <Route path='/register' element={user ? <Home /> : <Register />}/>
+        
+        <Route path='/registerworker' element={<RegisterWorkers/>}/>
+        <Route path='/adminpanel' element={<AdminPanel/>}/>
+        <Route path='/manageuser' element={user?.role === 'A' ? <ManageUser /> : <Home />}/>
+        <Route path='/doctorpanel' element={<DoctorPanel/>}/>
+        <Route path='/prescription' element={<Prescription/>}/>
+        <Route path='/symptoms' element={<Symptoms/>}/>
+        <Route path='/refer' element={<Refer/>}/>
+        <Route path='/googlefit' element={<GoogleFit/>}/>
+
+
+
+
+
+      </Route>
+    </Routes>
+    
+    
+    </BrowserRouter>
+  
 }
 
-export default App

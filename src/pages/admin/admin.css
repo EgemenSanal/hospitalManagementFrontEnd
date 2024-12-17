@@ -1,0 +1,240 @@
+#root {
+    max-width: 100%;
+    margin: 5;
+    padding: 5;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .admin-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .header {
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .subtitle {
+    margin: 0.5rem 0 0;
+    color: #666;
+    font-size: 1.2rem;
+  }
+  
+  .admin-banner {
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    margin: 2rem 0;
+  }
+  
+  .admin-banner h2 {
+    margin: 0;
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+  }
+  
+  .admin-panel {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #666;
+
+  }
+  
+  .section-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .admin-card {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .admin-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+      font-size: 2rem;
+    }
+    
+    .admin-banner h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .search-container {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    padding-left: 2.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f3f0f6;
+    font-size: 1rem;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+  
+  .results-section h2 {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 0.25rem;
+  }
+  
+  .results-subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .user-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .user-details h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .user-details p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .user-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .btn.manage {
+    background: #333;
+    color: white;
+  }
+  
+  .btn.delete {
+    background: #ff4444;
+    color: white;
+  }
+  
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: white;
+      color: black;
+    }
+    
+    .btn {
+      color: white;
+    }
+  }
+  .custom-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .custom-label input {
+    margin-left: 8px;
+    padding: 8px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .custom-label input:focus {
+    border-color: darkblue;
+  }

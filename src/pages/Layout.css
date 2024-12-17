@@ -1,0 +1,28 @@
+.header {
+    background-color: #2f3943;
+    color: #2f3943;
+    padding: 10px 20px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #0056b3;
+}
+
+.space-x-4 {
+    display: flex;
+    gap: 16px;
+}
