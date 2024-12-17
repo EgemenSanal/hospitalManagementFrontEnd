@@ -16,13 +16,7 @@ export default function Register(){
         role:'C'
 
     })
-    function handleChange(e) {
-      const { name, value } = e.target;
-      setFormData({
-          ...formData,
-          [name]: value, // input alanındaki name değerine göre state'i güncelle
-      });
-  }
+    
 
 
     const [errors, setErrors] = useState({})

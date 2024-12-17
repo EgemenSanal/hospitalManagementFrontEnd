@@ -15,6 +15,8 @@ import Refer from './pages/doctor/refer'
 import GoogleFit from './pages/doctor/googlefit'
 import { useContext } from 'react'
 import { AppContext } from './Context/AppContext'
+import Feedbacks from './pages/admin/feedback'
+import EmergencyResponse from './pages/admin/emergencyresponse'
 
 
 export default function App() {
@@ -31,6 +33,9 @@ export default function App() {
         <Route path='/registerworker' element={<RegisterWorkers/>}/>
         <Route path='/adminpanel' element={<AdminPanel/>}/>
         <Route path='/manageuser' element={user?.role === 'A' ? <ManageUser /> : <Home />}/>
+        <Route path='/feedbacks' element={user?.role === 'A' ? <Feedbacks /> : <Home />}/>
+        <Route path='/emergencyresponse' element={user?.role === 'A' ? <EmergencyResponse /> : <Home />}/>
+
         <Route path='/doctorpanel' element={<DoctorPanel/>}/>
         <Route path='/prescription' element={<Prescription/>}/>
         <Route path='/symptoms' element={<Symptoms/>}/>

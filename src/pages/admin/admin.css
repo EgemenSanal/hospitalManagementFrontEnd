@@ -238,3 +238,220 @@
   .custom-label input:focus {
     border-color: darkblue;
   }
+  .feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header-image {
+    width: 50%;
+  height: 30%;
+  object-fit: cover;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .feedbacks-list {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .feedback-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .feedback-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .feedback-content p {
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .feedback-from {
+    font-weight: 600;
+    color: #666;
+    text-align: right;
+  }
+  
+  .delete-button {
+    align-self: flex-end;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .delete-button:hover {
+    background-color: #ff2222;
+  }
+  
+  @media (max-width: 768px) {
+    #root {
+      padding: 1rem;
+    }
+    
+    .feedback-card {
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .title {
+    font-size: 2.5rem; /* Başlık büyüklüğü */
+    font-weight: bold; /* Kalınlık */
+    color: #333; /* Metin rengi (örneğin, koyu gri) */
+    text-align: center; /* Başlığı merkezle */
+    margin-bottom: 20px; /* Alttaki boşluk */
+    text-transform: uppercase; /* Tüm harfleri büyük yap */
+    letter-spacing: 1.5px; /* Harf aralığı */
+  }
+  .app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+  }
+  
+  
+  .messages-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .message-container {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .message-container h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .message-text {
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .message-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .from-text {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .response-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+  
+  .response-button:hover {
+    background-color: #444;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Modal Buttons */
+  .modal-buttons button {
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:first-child {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .modal-buttons button:last-child {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+  /* Reset some default styles */
+  

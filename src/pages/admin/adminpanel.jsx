@@ -31,7 +31,7 @@ export default function AdminPanel() {
             User Management
           </Link>
 
-          <Link
+          <Link to="/emergencyresponse"
             className="admin-card"
           >
             Emergency Response
@@ -49,7 +49,7 @@ export default function AdminPanel() {
             Manage Hospital Facilities
           </Link>
 
-          <Link 
+          <Link to="/feedbacks"
             className="admin-card"
           >
             Feedbacks

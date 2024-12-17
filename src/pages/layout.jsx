@@ -46,6 +46,16 @@ export default function Layout(){
                                     Register Worker
                                 </Link>
                             )}
+                            {user.role === "A" && (
+                                <Link to="/feedbacks" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Feedbacks
+                                </Link>
+                            )}
+                            {user.role === "A" && (
+                                <Link to="/adminpanel" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Panel
+                                </Link>
+                            )}
                                 <form onSubmit={handleLogout}>
                                 <button className="">
                                     Logout
