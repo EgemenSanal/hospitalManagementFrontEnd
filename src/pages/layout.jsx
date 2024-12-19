@@ -56,6 +56,51 @@ export default function Layout(){
                                     Panel
                                 </Link>
                             )}
+                            {user.role === "D" && (
+                                <Link to="/doctorpanel" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Doctor Panel
+                                </Link>
+                            )}
+                            {user.role === "D" && (
+                                <Link to="/prescription" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Prescription
+                                </Link>
+                            )}
+                            {user.role === "D" && (
+                                <Link to="/symptoms" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Symptoms
+                                </Link>
+                            )}
+                            {user.role === "D" && (
+                                <Link to="/refer" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Refer
+                                </Link>
+                            )}
+                            {user.role === "P" && (
+                                <Link to="/patientprofile" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Profile
+                                </Link>
+                            )}
+                            {user.role === "P" && (
+                                <Link to="/appointment" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Appointment
+                                </Link>
+                            )}
+                            {user.role === "P" && (
+                                <Link to="/history" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Patient History
+                                </Link>
+                            )}
+                            {user.role === "P" && (
+                                <Link to="/payment" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Payment Method
+                                </Link>
+                            )}
+                            {user.role === "P" && (
+                                <Link to="/patientprescriptions" className="flex items-center space-x-2 nav-link font-bold text-base">
+                                    Prescriptions
+                                </Link>
+                            )}
                                 <form onSubmit={handleLogout}>
                                 <button className="">
                                     Logout

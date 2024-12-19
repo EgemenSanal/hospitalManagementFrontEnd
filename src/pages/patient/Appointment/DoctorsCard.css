@@ -1,0 +1,31 @@
+.doctor-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctor-name {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .doctor-info {
+    color: #666;
+    margin: 0 0 1rem 0;
+  }
+  
+  .appointment-button {
+    background: #f0f0f0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+  }
+  
+  .appointment-button:hover {
+    background: #e0e0e0;
+  }

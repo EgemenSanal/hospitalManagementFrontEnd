@@ -148,6 +148,13 @@ export default function ManageUser() {
                   <br />
 
                   <button type="submit" className="btn">Update</button>
+                  <button 
+  type="button" 
+  className="btn" 
+  onClick={() => navigate('/save-address')}>
+  Save User Address
+</button>
+
                 </form>
               </div>
             </div>

@@ -1,0 +1,11 @@
+.prescriptions-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .prescriptions-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }

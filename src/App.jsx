@@ -17,6 +17,12 @@ import { useContext } from 'react'
 import { AppContext } from './Context/AppContext'
 import Feedbacks from './pages/admin/feedback'
 import EmergencyResponse from './pages/admin/emergencyresponse'
+import MapComponent from './pages/admin/saveadress'
+import { ProfileForm } from './pages/patient/Profile/ProfileForm'
+import { DoctorsPage } from './pages/patient/Appointment/DoctorsPage'
+import { PatientHistory } from './pages/patient/PatientHistory/PatientHistory'
+import { PaymentMethod } from './pages/patient/PaymentMethod/PaymentMethod'
+import { Prescriptions } from './pages/patient/Prescriptions/Prescriptions'
 
 
 export default function App() {
@@ -36,11 +42,18 @@ export default function App() {
         <Route path='/feedbacks' element={user?.role === 'A' ? <Feedbacks /> : <Home />}/>
         <Route path='/emergencyresponse' element={user?.role === 'A' ? <EmergencyResponse /> : <Home />}/>
 
-        <Route path='/doctorpanel' element={<DoctorPanel/>}/>
-        <Route path='/prescription' element={<Prescription/>}/>
-        <Route path='/symptoms' element={<Symptoms/>}/>
-        <Route path='/refer' element={<Refer/>}/>
-        <Route path='/googlefit' element={<GoogleFit/>}/>
+        <Route path='/doctorpanel' element={user?.role === 'D' ? <DoctorPanel /> : <Home />}/>
+        <Route path='/prescription' element={user?.role === 'D' ? <Prescription /> : <Home />}/>
+        <Route path='/symptoms' element={user?.role === 'D' ? <Symptoms /> : <Home />}/>
+        <Route path='/refer' element={user?.role === 'D' ? <Refer /> : <Home />}/>
+        <Route path='/googlefit' element={user?.role === 'D' ? <GoogleFit /> : <Home />}/>
+
+        <Route path='/save-address' element={<MapComponent/>}/>
+        <Route path='/patientprofile' element={<ProfileForm/>}/>
+        <Route path='/appointment' element={<DoctorsPage/>}/>
+        <Route path='/history' element={<PatientHistory/>}/>
+        <Route path='/payment' element={<PaymentMethod/>}/>
+        <Route path='/patientprescriptions' element={<Prescriptions/>}/>
 
 
 

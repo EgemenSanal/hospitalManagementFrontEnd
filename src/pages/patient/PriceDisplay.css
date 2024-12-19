@@ -1,0 +1,20 @@
+.price-container {
+    margin: 4rem 0;
+  }
+  
+  .price-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .price-amount {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .currency {
+    font-size: 2rem;
+    vertical-align: super;
+  }
